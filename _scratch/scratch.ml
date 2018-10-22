@@ -1,3 +1,5 @@
+# https://deckofcardsapi.com/
+
 #require "cohttp-lwt-unix";;
 
 #require "yojson";;
@@ -44,7 +46,7 @@ let json_body uri =
 
 ;;
 
-
+(* SHUFFLE A CARD *)
 
 (* In utop the promise is realised immediately, so if you run the
 
@@ -195,4 +197,51 @@ Lwt_main.run do_something_else_1; print_endline "Done_1!"
 Lwt_main.run (do_something_else ()); print_endline "Done!"
 
 ;;
+
+
+(* DRAW A CARD 
+* https://deckofcardsapi.com/api/deck/<<deck_id>>/draw/?count=2
+*) 
+
+
+(* RESHUFFLE THE CARDS 
+* https://deckofcardsapi.com/api/deck/<<deck_id>>/shuffle/
+*)
+
+
+
+(* BRAND NEW DECK
+* https://deckofcardsapi.com/api/deck/new/
+*)
+
+
+
+(* A PARTIAL DECK 
+* https://deckofcardsapi.com/api/deck/new/shuffle/?cards=AS,2S,KS,AD,2D,KD,AC,2C,KC,AH,2H,KH
+*)
+
+(* ADDING TO PILES
+* https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/add/?cards=AS,2S
+*)
+
+
+(* SHUFFLE PILES 
+* https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/shuffle
+*)
+
+(* LISTING CARDS IN PILES
+* https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/list
+*)
+
+
+(* DRAWING FROM PILES
+* https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/draw/?cards=AS
+* https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/draw/?count=2
+* https://deckofcardsapi.com/api/deck/<<deck_id>>/draw/bottom/
+*)
+
+
+(* 
+* 
+*)
 
